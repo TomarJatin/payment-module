@@ -1,6 +1,5 @@
 import axios from "axios";
-
-const baseURL = process.env.NEXT_PUBLIC_API_URL;
+import { baseURL } from "../constants";
 
 export async function createOrder(amount: number) {
     const response = await axios.post(`${baseURL}/payment/razorpay/checkout`, {
